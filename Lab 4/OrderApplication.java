@@ -15,6 +15,7 @@ public class OrderApplication {
 		}
 
 		double cost = a.calculatePrice(item);
+		System.out.println("Date: " + a.getDateRecieved());
 		System.out.println(cost);
 
 		return true;
@@ -26,7 +27,7 @@ public class OrderApplication {
 
 			//gets rid of the first header line in the txt file
         	input.nextLine();
-        	//gets all the employee data from the file
+        	System.out.println("Importing Catalogue...");     
 			for (int i = 0; i < 10; i++) {			
 				Product a = new Product();
 				a.setPrice(input.nextDouble());
@@ -52,6 +53,16 @@ public class OrderApplication {
 
 
 	public static void main(String[] args) {
+
+		
+
+		System.out.println("Calculating Discount....");
+
+		PersonalCustomer pCust = new PersonalCustomer(63937373, "Lucio", "Tresendar Manor, Phandalin, Veil", 5000); 
+
+		CorporateCustomer pCorp = new CorporateCustomer("rmfCorp", "Lucio", "Tresendar Manor, Phandalin, Veil"); 
+
+		System.out.println("Creating new order...");     
 		Order a = new Order();
 		OrderApplication UI = new OrderApplication();
 		boolean t;

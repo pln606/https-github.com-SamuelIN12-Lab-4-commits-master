@@ -1,5 +1,5 @@
 Price Name ID
-2 OrionGalaxy_S9 12325
+2 Galaxy_S9_MEGA_MAX_ACTIVE_w/S-PEN(Non-Explosive) 12325
 3 iPhone_XYZ 125674
 4 Intel_Core_i9_963427XEFZ 7162839
 5 The_New_New_NEWEST_Razer_Blade_ProPro_Late2018XE 12345
@@ -9,4 +9,3 @@ Price Name ID
 9 Windows_10_Creators_ED_v52 983246528
 10 Surface_Pro_w/2_USB_PORTS 28713429
 11 STM100RB 12894571
-

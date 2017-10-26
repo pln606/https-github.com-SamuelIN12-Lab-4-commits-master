@@ -19,9 +19,9 @@ public class Customer {
 		return address;
 	}
 
-	double getDiscountRating(int test) {
+	double getDiscountRating() {
 
-		if (test == 0) {
+		if (creditRating != 0) {
 			this.discountRating = 0.1;
 		} else {
 			this.discountRating = creditRating/100000;

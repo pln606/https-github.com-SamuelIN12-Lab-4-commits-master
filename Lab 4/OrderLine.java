@@ -6,14 +6,14 @@ public class OrderLine {
 	double price = 0;
 	Product product = new Product();
 	
-	OrderLine(Product product) {
-
+	OrderLine(Product product, int quantity) {
+		this.quantity = quantity;
 		this.product = product;
-		this.price = product.getPrice();
+		this.price = this.product.getPrice();
 	}
 	
 	int getQuantity() {
-		//println("How many Products: ");
+		//System.out.println("How many Products: ");
 		//Scanner input = new Scanner;
 		//input.nextln();
 
