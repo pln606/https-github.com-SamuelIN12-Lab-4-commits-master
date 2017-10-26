@@ -5,12 +5,10 @@ public class Product {
 	String name;
 	double price;
 	int productID;
-	public ArrayList catalogue = new ArrayList();
 	
 	String getName() {
-		return null;
+		return name;
 	}
-	
 	double getPrice() {
 		return price;
 	}

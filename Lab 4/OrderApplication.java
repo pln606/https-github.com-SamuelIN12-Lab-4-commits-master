@@ -3,19 +3,24 @@ import java.util.*;
 
 public class OrderApplication {
 
-	Product item = new Product();
+	public ArrayList item = new ArrayList();
 
 	boolean createOrder(Order a) {
 
-		int cost = a.calculatePrice()
+		bool test = importCatalogue();
 
+		if (test == true) {
+			System.out.println("Successful Import");
+		}
+
+		int cost = a.calculatePrice();
 	}
 	
 	boolean importCatalogue() {
 		try {
 			Scanner input = new Scanner(Paths.get("ProductCatalogue.txt"));
 
-			//gets rid of the first header line in the csv file
+			//gets rid of the first header line in the txt file
         	input.nextLine();
         	//gets all the employee data from the file
 			for (int i = 0; i < 10; i++) {			
