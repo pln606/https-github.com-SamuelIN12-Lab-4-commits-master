@@ -15,6 +15,9 @@ public class Order{
 	Order(Customer a) {
 		this.customer = a;
 		System.out.println("Order initialized, the date is: " + getDateRecieved());
+		Random rand = new Random();
+		orderID = rand.nextInt(100000) + 10000;
+		System.out.println("Your order ID is: " + orderID);
 	}
 	
 	public void addOrderLine(Product p, int q) {
