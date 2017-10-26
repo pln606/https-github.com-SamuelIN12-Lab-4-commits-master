@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class OrderLine {
@@ -17,8 +16,8 @@ public class OrderLine {
 	int getQuantity() {
 		//println("How many Products: ");
 		//Scanner input = new Scanner;
-
 		//input.nextln();
+
 		this.quantity = 3;
 
 		return quantity;

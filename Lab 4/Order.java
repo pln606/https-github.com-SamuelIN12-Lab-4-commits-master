@@ -22,7 +22,8 @@ public class Order {
 			price += a.getPrice();
 		}
 
-
+		PersonalCustomer pCust = new PersonalCustomer(54876463937373, "Lucio", "Tresendar Manor, Phandalin, Veil", 5000); 
+		CorporateCustomer pCust = new PersonalCustomer("rmfCorp", "Lucio", "Tresendar Manor, Phandalin, Veil"); 
 
 
 		return price;
