@@ -3,9 +3,9 @@ import java.util.*;
 
 public class PersonalCustomer extends Customer{
 
-	int creditCardNumber;
+	int creditCardNumber = 0;
 
-	PersonalCustomer(int a, string name, string address, float credit) {
+	PersonalCustomer(int a, String name, String address, double credit) {
 		this.creditCardNumber = a;
 		setName(name);
 		setAddress(address);

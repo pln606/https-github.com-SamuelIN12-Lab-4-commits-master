@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Customer {
 
-	String name;
-	String address;
-	float creditRating;
-	float discountRating;
+	String name = "";
+	String address = "";
+	double creditRating = 0;
+	double discountRating = 0;
 
-	float getCreditRating() {
+	double getCreditRating() {
 		return creditRating;	
 	}
 	String getName() {
@@ -19,7 +19,7 @@ public class Customer {
 		return address;
 	}
 
-	float getDiscountRating(int test) {
+	double getDiscountRating(int test) {
 
 		if (test == 0) {
 			this.discountRating = 0.1;
@@ -31,16 +31,15 @@ public class Customer {
 	}
 
 
-	String setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
-	String setAddress(String address) {
+	void setAddress(String address) {
 		this.address = address;
-		return address;
+
 	}
-	float setCreditRating(float creditRating) {
+	void setCreditRating(double creditRating) {
 		this.discountRating = creditRating/100000;
-		return discountRating;
 	}
 
 }

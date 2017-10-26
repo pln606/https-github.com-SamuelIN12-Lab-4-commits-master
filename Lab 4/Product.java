@@ -2,9 +2,9 @@ import java.util.*;
 
 public class Product {
 
-	String name;
-	double price;
-	int productID;
+	String name = "";
+	double price = 0;
+	int productID = 0;
 	
 	String getName() {
 		return name;

@@ -1,34 +1,39 @@
+import java.io.*;
 import java.util.*;
-
+import java.nio.file.Paths;
 
 public class OrderApplication {
 
-	public ArrayList item = new ArrayList();
+	public ArrayList<Product> item = new ArrayList<Product>(10);
 
-	boolean createOrder(Order a) {
+	public boolean createOrder(Order a) {
 
-		bool test = importCatalogue();
+		boolean test = importCatalogue();
 
 		if (test == true) {
 			System.out.println("Successful Import");
 		}
 
-		int cost = a.calculatePrice();
+		double cost = a.calculatePrice(item);
+		System.out.println(cost);
+
+		return true;
 	}
 	
 	boolean importCatalogue() {
 		try {
-			Scanner input = new Scanner(Paths.get("ProductCatalogue.txt"));
+			Scanner input = new Scanner(Paths.get("products.txt"));
 
 			//gets rid of the first header line in the txt file
         	input.nextLine();
         	//gets all the employee data from the file
 			for (int i = 0; i < 10; i++) {			
-				item = new Product;
-				item.setPrice(input.nextDouble());
-				item.setName(input.next());
-				item.setProductID(input.nextInt());
-				catalogue.add(item);
+				Product a = new Product();
+				a.setPrice(input.nextDouble());
+				a.setName(input.next());
+				a.setProductID(input.nextInt());
+				item.add(a);
+				System.out.println(item.get(i).getName()); 
 			}
 
 			input.close();
@@ -41,6 +46,16 @@ public class OrderApplication {
             System.out.println("ERROR: File Cannot be Read");                  
 
         }
+
+        return true;
+	}
+
+
+	public static void main(String[] args) {
+		Order a = new Order();
+		OrderApplication UI = new OrderApplication();
+		boolean t;
+		t = UI.createOrder(a);
 	}
 	
 }

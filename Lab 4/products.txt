@@ -1,12 +1,12 @@
 Price Name ID
-10.99 OrionGalaxy_S9 12325
-199700.99 iPhone_XYZ 125674
-1010.99 Intel_Core_i9_963427XEFZ 7162839
-1000.99 The_New_New_NEWEST_Razer_Blade_ProPro_Late2018XE 12345
-100730.99 Turing_Phone_Reboot 12345
-100.99 Tesla_Model_88 12345
-99999999.99 Macbook_Pro_15"_2017_w/Retina_Touch_Bar 1
-1000888.99 Windows_10_Creators_ED_v52 983246528
-100077.99 Surface_Pro_w/2_USB_PORTS 28713429
-1.99 STM100RB 12894571
+2 OrionGalaxy_S9 12325
+3 iPhone_XYZ 125674
+4 Intel_Core_i9_963427XEFZ 7162839
+5 The_New_New_NEWEST_Razer_Blade_ProPro_Late2018XE 12345
+6 Turing_Phone_Reboot 12345
+7 Tesla_Model_88 12345
+8 Macbook_Pro_15"_2017_w/Retina_Touch_Bar 1
+9 Windows_10_Creators_ED_v52 983246528
+10 Surface_Pro_w/2_USB_PORTS 28713429
+11 STM100RB 12894571
 

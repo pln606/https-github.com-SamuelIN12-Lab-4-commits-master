@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class CorporateCustomer extends Customer {
-	String contactName;
+	String contactName = "";
 
-	CorporateCustomer(string a, string name, string address) {
+	CorporateCustomer(String a, String name, String address) {
 		setName(name);
 		setAddress(address);
 		this.contactName = a;

@@ -2,15 +2,14 @@ import java.util.*;
 
 public class OrderLine {
 
-	int quantity;
-	double price;
-	Product product = new Product;
+	int quantity = 0;
+	double price = 0;
+	Product product = new Product();
 	
 	OrderLine(Product product) {
 
 		this.product = product;
-		this.quantity = 0;
-		this.price = 0;
+		this.price = product.getPrice();
 	}
 	
 	int getQuantity() {
@@ -24,7 +23,6 @@ public class OrderLine {
 	}
 	
 	double getPrice() {
-		price = product.getPrice()
 		return price;
 	}
 	
