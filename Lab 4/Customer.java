@@ -2,44 +2,42 @@ import java.util.*;
 
 public class Customer {
 
-	String name = "";
-	String address = "";
-	double creditRating = 0;
-	double discountRating = 0;
+	private String name = "";
+	private String address = "";
+	private double creditRating = 0;
+	private double discountRating = 0;
 
-	double getCreditRating() {
+	public double getCreditRating() {
 		return creditRating;	
 	}
-	String getName() {
 
+	public String getName() {
 		return name;
 	}
-	String getAddress() {
 
+	public String getAddress() {
 		return address;
 	}
 
-	double getDiscountRating() {
-
-		if (creditRating != 0) {
+	public double getDiscountRating() {
+		if (creditRating == 0) {
 			this.discountRating = 0.1;
-		} else {
+		}
+		else if (creditRating > 0) {
 			this.discountRating = creditRating/100000;
 		}
-
 		return discountRating;
 	}
 
-
-	void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	void setAddress(String address) {
+	public void setAddress(String address) {
 		this.address = address;
-
 	}
-	void setCreditRating(double creditRating) {
-		this.discountRating = creditRating/100000;
+
+	public void setCreditRating(double creditRating) {
+		this.creditRating = creditRating;
 	}
 
 }

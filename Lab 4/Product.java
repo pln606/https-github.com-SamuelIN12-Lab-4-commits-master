@@ -2,26 +2,26 @@ import java.util.*;
 
 public class Product {
 
-	String name = "";
-	double price = 0;
-	int productID = 0;
+	private String name = "";
+	private double price = 0;
+	private int productID = 0;
 	
-	String getName() {
+	public String getName() {
 		return name;
 	}
-	double getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	int getProductID() {
+	public int getProductID() {
 		return productID;
 	}
-	void setPrice(double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
-	void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	void setProductID(int productID) {
+	public void setProductID(int productID) {
 		this.productID = productID;
 	}
 

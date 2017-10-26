@@ -2,27 +2,25 @@ import java.util.*;
 
 public class OrderLine {
 
-	int quantity = 0;
-	double price = 0;
-	Product product = new Product();
+	private int quantity = 0;
+	private double price = 0;
+	private Product product = new Product();
 	
 	OrderLine(Product product, int quantity) {
 		this.quantity = quantity;
 		this.product = product;
 		this.price = this.product.getPrice();
 	}
+
+	public Product getProduct() {
+		return product;
+	}
 	
-	int getQuantity() {
-		//System.out.println("How many Products: ");
-		//Scanner input = new Scanner;
-		//input.nextln();
-
-		this.quantity = 3;
-
+	public int getQuantity() {
 		return quantity;
 	}
 	
-	double getPrice() {
+	public double getPrice() {
 		return price;
 	}
 	
