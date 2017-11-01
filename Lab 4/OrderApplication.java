@@ -98,7 +98,7 @@ public class OrderApplication {
 		System.out.println("Do you want to remove an item entirely (True/False): ");
 		test = input.nextBoolean();
 
-		while (test = true) {
+		while (test == true) {
 			System.out.println("Item (indicate 1 for 1st item etc): ");
 
 			rItem = input.nextInt();
@@ -111,10 +111,16 @@ public class OrderApplication {
 			test = input.nextBoolean();
 		}
 
+		System.out.println("Your order is: ");
+		for (int i = 0; i < p.size(); i++) {
+			System.out.print(p.get(i).getName()); 
+			System.out.println(" Quantity: "+ quantity.get(i)); 
+		}
+
 		System.out.println("Do you want to modify a quantity (True/False): ");
 		test = input.nextBoolean();
 
-		while (test = true) {
+		while (test == true) {
 			System.out.println("Item (indicate 1 for 1st item etc): ");
 
 			rItem = input.nextInt();
@@ -123,7 +129,7 @@ public class OrderApplication {
 
 			quantity.set(rItem, input.nextInt());
 
-			System.out.println("Remove more? (True/False):  ");
+			System.out.println("Modify more? (True/False):  ");
 
 			test = input.nextBoolean();
 		}
