@@ -111,19 +111,33 @@ public class OrderApplication {
 			test = input.nextBoolean();
 		}
 
+		System.out.println("Do you want to modify a quantity (True/False): ");
+		test = input.nextBoolean();
+
+		while (test = true) {
+			System.out.println("Item (indicate 1 for 1st item etc): ");
+
+			rItem = input.nextInt();
+
+			System.out.println("New quantity: ");
+
+			quantity.set(rItem, input.nextInt());
+
+			System.out.println("Remove more? (True/False):  ");
+
+			test = input.nextBoolean();
+		}
+
+		System.out.println("Your final order is: ");
+		for (int i = 0; i < p.size(); i++) {
+			System.out.print(p.get(i).getName()); 
+			System.out.println(" Quantity: "+ quantity.get(i)); 
+
+			rItem = (int) quantity.get(i);
+			a.addOrderLine(p.get(i), rItem);
+		}
+
 		System.out.println("Creating Order...");
-
-		a.addOrderLine(UI.item.get(0), 2);
-		a.addOrderLine(UI.item.get(1), 2);
-		a.addOrderLine(UI.item.get(2), 2);
-		a.addOrderLine(UI.item.get(3), 2);
-		a.addOrderLine(UI.item.get(4), 2);
-		a.addOrderLine(UI.item.get(5), 2);
-		a.addOrderLine(UI.item.get(6), 2);
-		a.addOrderLine(UI.item.get(7), 2);
-		a.addOrderLine(UI.item.get(8), 2);
-		a.addOrderLine(UI.item.get(9), 2);
-
 
 		boolean t;
 		t = UI.createOrder(a);
