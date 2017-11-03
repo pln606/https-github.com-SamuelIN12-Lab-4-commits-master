@@ -54,7 +54,17 @@ public class OrderApplication {
 	public static void main(String[] args) {
 
 		OrderApplication UI = new OrderApplication();
-		System.out.println("\nCreating new customer...");   
+		System.out.println("\nCreating new customer...");  
+
+		Scanner input = new Scanner(System.in); 
+
+		int size;
+		boolean test = true;
+		int rItem;
+
+		ArrayList<Product> userChoice = new ArrayList<Product>();
+		List quantity = new ArrayList();
+		ArrayList<Product> p = new ArrayList<Product>();
 		
 		PersonalCustomer pCust = new PersonalCustomer(63937373, "Lucio", "Tresendar Manor, Phandalin, Veil", 5000); 
 
@@ -62,19 +72,90 @@ public class OrderApplication {
 		
 		Order a = new Order(pCust); //to test corp customer uncomment above line of code and replace pCust here with pCorp
 
-		System.out.println("Adding items to cart..."); 
-		
-		a.addOrderLine(UI.item.get(0), 2);
-		a.addOrderLine(UI.item.get(1), 2);
-		a.addOrderLine(UI.item.get(2), 2);
-		a.addOrderLine(UI.item.get(3), 2);
-		a.addOrderLine(UI.item.get(4), 2);
-		a.addOrderLine(UI.item.get(5), 2);
-		a.addOrderLine(UI.item.get(6), 2);
-		a.addOrderLine(UI.item.get(7), 2);
-		a.addOrderLine(UI.item.get(8), 2);
-		a.addOrderLine(UI.item.get(9), 2);
+		do {
 
+			System.out.println("What items would you like to add to your cart (indicate 1 for 1st item etc): ");
+
+			p.add(UI.item.get(input.nextInt()));
+
+			System.out.println("How many of those items: ");
+
+			quantity.add(input.nextInt());
+
+			System.out.println("Add more? (True/False):  ");
+
+			test = input.nextBoolean();
+
+		} while(test == true);
+
+
+		System.out.println("Your order is: ");
+		for (int i = 0; i < p.size(); i++) {
+			System.out.print(p.get(i).getName()); 
+			System.out.println(" Quantity: "+ quantity.get(i)); 
+		}
+
+		System.out.println("Do you want to remove an item entirely (True/False): ");
+		test = input.nextBoolean();
+
+		while (test == true) {
+			System.out.println("Item (indicate 1 for 1st item etc): ");
+
+			rItem = input.nextInt();
+
+			p.remove(rItem);
+			quantity.remove(rItem);
+
+			System.out.println("Your order is: ");
+			for (int i = 0; i < p.size(); i++) {
+				System.out.print(p.get(i).getName()); 
+				System.out.println(" Quantity: "+ quantity.get(i)); 
+			}
+
+			System.out.println("Remove more? (True/False):  ");
+
+			test = input.nextBoolean();
+		}
+
+		System.out.println("Your order is: ");
+		for (int i = 0; i < p.size(); i++) {
+			System.out.print(p.get(i).getName()); 
+			System.out.println(" Quantity: "+ quantity.get(i)); 
+		}
+
+		System.out.println("Do you want to modify a quantity (True/False): ");
+		test = input.nextBoolean();
+
+		while (test == true) {
+			System.out.println("Item (indicate 1 for 1st item etc): ");
+
+			rItem = input.nextInt();
+
+			System.out.println("New quantity: ");
+
+			quantity.set(rItem, input.nextInt());
+
+			System.out.println("Your order is: ");
+			for (int i = 0; i < p.size(); i++) {
+				System.out.print(p.get(i).getName()); 
+				System.out.println(" Quantity: "+ quantity.get(i)); 
+			}
+
+			System.out.println("Modify more? (True/False):  ");
+
+			test = input.nextBoolean();
+		}
+
+		System.out.println("Your final order is: ");
+		for (int i = 0; i < p.size(); i++) {
+			System.out.print(p.get(i).getName()); 
+			System.out.println(" Quantity: "+ quantity.get(i)); 
+
+			rItem = (int) quantity.get(i);
+			a.addOrderLine(p.get(i), rItem);
+		}
+
+		System.out.println("Creating Order...");
 
 		boolean t;
 		t = UI.createOrder(a);
