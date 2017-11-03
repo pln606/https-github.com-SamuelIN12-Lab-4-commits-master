@@ -106,6 +106,12 @@ public class OrderApplication {
 			p.remove(rItem);
 			quantity.remove(rItem);
 
+			System.out.println("Your order is: ");
+			for (int i = 0; i < p.size(); i++) {
+				System.out.print(p.get(i).getName()); 
+				System.out.println(" Quantity: "+ quantity.get(i)); 
+			}
+
 			System.out.println("Remove more? (True/False):  ");
 
 			test = input.nextBoolean();
@@ -128,6 +134,12 @@ public class OrderApplication {
 			System.out.println("New quantity: ");
 
 			quantity.set(rItem, input.nextInt());
+
+			System.out.println("Your order is: ");
+			for (int i = 0; i < p.size(); i++) {
+				System.out.print(p.get(i).getName()); 
+				System.out.println(" Quantity: "+ quantity.get(i)); 
+			}
 
 			System.out.println("Modify more? (True/False):  ");
 
